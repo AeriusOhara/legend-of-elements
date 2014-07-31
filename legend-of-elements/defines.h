@@ -1,0 +1,16 @@
+#define FIELD_SIZE 7
+
+#define BLOCK_TYPES 5
+#define BLOCK_SIZE 20
+#define BLOCK_SPR_SIZE 16
+
+#define BLOCK_GRID_X 329
+#define BLOCK_GRID_Y 300
+
+#define BLOCK_PADDING 2
+
+#define FALL_SPEED 1
+#define RAISE_SPEED 0.1
+
+#define SELECTOR_WIDTH 20
+#define SELECTOR_HEIGHT 10
