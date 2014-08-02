@@ -94,20 +94,6 @@ int main(){
 				}
 			}
 
-			// Update the beacons (must happen before ui's think())
-			/*beacons.clear();
-			for(int i = 0; i < blocks.size(); i++){
-				blockBeacon tmp;
-				tmp.x = blocks[i].xPos();
-				tmp.y = blocks[i].yPos();
-				tmp.rect.left = tmp.x - (tmp.rect.width / 2);
-				tmp.rect.top = tmp.y - (tmp.rect.height / 2);
-				tmp.rect.width = 10;
-				tmp.rect.height = 10;
-
-				beacons.push_back(tmp);
-			}*/
-
 			// UI Updates
 			ui.think(blocks);
 
@@ -130,7 +116,7 @@ int main(){
 		window.draw(ui.background);
 		window.draw(ui.selector);
 
-		/* Debug colission rect render
+		/* colission rect render
 		sf::RectangleShape rect1(sf::Vector2f(10, 10));
 		sf::RectangleShape rect2(sf::Vector2f(10, 10));
 		rect1.setPosition(ui.getColRect1().left, ui.getColRect1().top);

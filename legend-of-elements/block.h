@@ -8,6 +8,8 @@
 enum gemTypes{BLUE,GREEN,RED,ORANGE,PINK};
 enum gemProperties{DOUBLE_POINTS,TRIPLE_POINTS,LOCKED};
 
+// We'll store the spirtes in here so we can reference them instead
+// of loading it for each block entity from the hdd
 class blockSprites{
 	sf::Texture tex[BLOCK_TYPES];
 	sf::Sprite sprite[BLOCK_TYPES];
@@ -15,12 +17,6 @@ class blockSprites{
 public:
 	blockSprites();
 	sf::Sprite getSprite(int type);
-};
-
-class blockBeacon{
-public:
-	sf::FloatRect rect;
-	float x, y;
 };
 
 class block: public entity{
