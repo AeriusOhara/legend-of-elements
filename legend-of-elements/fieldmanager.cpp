@@ -8,9 +8,6 @@ void fieldManager::swapBlocks(std::vector<block>& blocks, UI& ui){
 
 	for(int i = 0; i < blocks.size(); i++){
 		// Find the block that's at the rect's point
-		//printf("%f,%f -> %f,%f\n", blocks[i].blockBeacon.left, blocks[i].blockBeacon.top, ui.getColRect1().left, ui.getColRect1().top);
-		//if(blocks[i].xPos() == rect.left && blocks[i].yPos() == rect.top){
-		//if(ui.getColRect1().intersects(blocks[i].blockBeacon)){
 		if(ui.getColRect1().contains(blocks[i].xPos(), blocks[i].yPos())){
 			block1 = i;
 			xpos1 = blocks[i].xPos();
@@ -20,9 +17,6 @@ void fieldManager::swapBlocks(std::vector<block>& blocks, UI& ui){
 
 	for(int i = 0; i < blocks.size(); i++){
 		// Find the block that's to the right of the rect's point
-		printf("%f,%f -> %f,%f\n", blocks[i].blockBeacon.left, blocks[i].blockBeacon.top, ui.getColRect1().left, ui.getColRect1().top);
-		//if(blocks[i].xPos() == rect.left+BLOCK_SIZE && blocks[i].yPos() == rect.top){
-		//if(ui.getColRect2().intersects(blocks[i].blockBeacon)){
 		if(ui.getColRect2().contains(blocks[i].xPos(), blocks[i].yPos())){
 			block2 = i;
 			xpos2 = blocks[i].xPos();
@@ -79,13 +73,7 @@ void fieldManager::pollField(std::vector<block>& blocks){
 
 		// Now check for Horizontal matches
 		for(int i = 0; i < yPositions.size(); i++){
-			// In the vector the blocks are one after another, since we create
-			// a whole row at once, in order. So a whole row could for example
-			// be:
-			// blocks[2] -> blocks[3] -> blocks[4] -> blocks[5], etc
-			// So you could-- you know, you'll remember it tomorrow, for easy
-			// value pulling and matching!
-		
+			
 		}
 	}
 }
